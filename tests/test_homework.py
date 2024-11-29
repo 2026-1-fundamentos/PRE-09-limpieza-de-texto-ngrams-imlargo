@@ -20,12 +20,12 @@ def test_01():
 
     test = pd.read_csv("files/test.csv", index_col=None)
 
-    assert test.loc[0, "key"] == "adcqdhereshoieocqurisue"
-    assert test.loc[1, "key"] == "adcqdhereshoieocqurisue"
-    assert test.loc[3, "key"] == "adcqdherghoinngocquryueyi"
-    assert test.loc[6, "key"] == "agalctcudugriciolpltnodonprrarirotituuculur"
-    assert test.loc[12, "key"] == "aiancoecinirlimpnenyomparly"
-    assert test.loc[16, "key"] == "alanapatcacsiciolilynansonplppssatiyt"
+    assert test.loc[0, "key"] == "alanapatcacsiciolilynnaonplppsatiyt"
+    assert test.loc[2, "key"] == "alanapatcacsiciolilynansonplppssatiyt"
+    assert test.loc[3, "key"] == "alancsdeelicllymonaodsmtiyt"
+    assert test.loc[7, "key"] == "alancadeeliclmlslymonaodstiyt"
+    assert test.loc[12, "key"] == "agalctcudugriclpltodprrariroststuuculur"
+    assert test.loc[17, "key"] == "aiesinirlinerls"
 
     #
     # Retorna error si la carpeta  no existe
@@ -35,7 +35,7 @@ def test_01():
     #
     # Lee el contenido del archivo output.txt
     dataframe = pd.read_csv("files/output.txt")
-    count = dataframe.groupby("text").size()
+    count = dataframe.groupby("cleaned_text").size()
 
     assert count.loc["AD-HOC QUERIES"] == 3
     assert count.loc["AGRICULTURAL PRODUCTION"] == 1
